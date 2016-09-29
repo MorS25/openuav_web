@@ -6,5 +6,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     #Page URLs
     url(r'^$', views.index, name='info'),
-    url(r'^$', views.index, name='run'),
+    url(r'^land$', views.land, name='land'),
+    url(r'^takeoff$', views.takeoff, name='takeoff'),
+    url(r'^offboard$', views.offboard, name='offboard'),
+    url(r'^arm$', views.arm, name='arm'),
     ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -9,7 +9,24 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-
+    <script>
+            function land() {
+                $.get('land', function (data) {
+                });
+            }
+            function takeoff() {
+                $.get('takeoff', function (data) {
+                });
+            }
+            function offboard() {
+                $.get('offboard', function (data) {
+                });
+            }
+            function arm() {
+                $.get('arm', function (data) {
+                });
+            }
+        </script>
 
 
 
@@ -17,16 +34,11 @@
 </head>
 <body>
 <div id="main>">
-
+<button onclick="land();">Land</button>
+      <button onclick="takeoff();">Takeoff</button>
+      <button onclick="offboard();">Offboard</button>
+        <button onclick="arm();">ARM</button>
     <div id="info">
-        <h2>Instructions</h2>
-        <p>
-            <ol>
-                <li>Choose a UAV SDF.</li>
-                <li>Choose or upload a world file.</li>
-            </ol>
-        </p>
-
         <iframe src="http://openuav.us:8080/stream_viewer?topic=/uav_camera/image_raw_front" width="600" height="600"></iframe>
         <iframe src="http://openuav.us:8080/stream_viewer?topic=/uav_camera/image_raw_down" width="600" height="600"></iframe>
         <br/>
