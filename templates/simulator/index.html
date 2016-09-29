@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>OpenUAV Web</title>
+    <!--<link rel="stylesheet" href="/static/scripts/paperjs/examples/css/style.css"> -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script type='text/javascript' src='http://code.jquery.com/jquery-1.8.2.js'></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+
+
+
+</head>
+<body>
+<div id="main>">
+
+    <div id="info">
+        <h2>Instructions</h2>
+        <p>
+            <ol>
+                <li>Choose a UAV SDF.</li>
+                <li>Choose or upload a world file.</li>
+            </ol>
+        </p>
+
+        <iframe src="http://openuav.us:8080/stream_viewer?topic=/uav_camera/image_raw_front" width="800" height="600"></iframe>
+        <br/>
+        <iframe src="http://openuav.us:8080/stream_viewer?topic=/uav_camera/image_raw_down" width="800" height="600"></iframe>
+        <iframe src="http://openuav.us:8081" width="800" height="600"></iframe>
+
+
+    </div>
+
+</div>
+</body>
+</html>
