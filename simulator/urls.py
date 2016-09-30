@@ -10,4 +10,8 @@ urlpatterns = [
     url(r'^takeoff$', views.takeoff, name='takeoff'),
     url(r'^offboard$', views.offboard, name='offboard'),
     url(r'^arm$', views.arm, name='arm'),
-    ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    url(r'^disarm$', views.disarm, name='arm'),
+    url(r'^mission$', views.mission, name='arm'),
+    url(r'^rtl$', views.rtl, name='arm'),
+
+              ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

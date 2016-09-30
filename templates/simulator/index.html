@@ -22,8 +22,21 @@
                 $.get('offboard', function (data) {
                 });
             }
+            function mission() {
+                $.get('mission', function (data) {
+                });
+            }
             function arm() {
                 $.get('arm', function (data) {
+                });
+            }
+
+            function disarm() {
+                $.get('disarm', function (data) {
+                });
+            }
+            function rtl() {
+                $.get('rtl', function (data) {
                 });
             }
         </script>
@@ -32,15 +45,20 @@
 
 
 </head>
-<body onload="$('html, body').animate({scrollTop: 0},'fast')">
+<body onload="$('html, body').animate({scrollTop: 0},'slow')">
 <div id="main>">
 <button onclick="land();" style="font-size: large;">Land</button>
       <button onclick="takeoff();" style="font-size: large;">Takeoff</button>
-      <button onclick="offboard();" style="font-size: large;">Offboard</button>
+    <button onclick="rtl();" style="font-size: large;">ReturnToHome</button>
+
+    <button onclick="offboard();" style="font-size: large;">Offboard Position Control</button>
+       <button onclick="mission();" style="font-size: large;">WaypointMission</button>
+
         <button onclick="arm();" style="font-size: large;">ARM</button>
+    <button onclick="disarm();" style="font-size: large;">DISARM</button>
     <div id="info">
-        <iframe src="http://openuav.us:8080/stream_viewer?topic=/uav_camera/image_raw_front" width="600" height="600"></iframe>
-        <iframe src="http://openuav.us:8080/stream_viewer?topic=/uav_camera/image_raw_down" width="600" height="600"></iframe>
+        <iframe src="http://openuav.us:8080/stream_viewer?topic=/uav_camera/image_raw_front&quality=50" width="600" height="600"></iframe>
+        <iframe src="http://openuav.us:8080/stream_viewer?topic=/uav_camera/image_raw_down&quality=50" width="600" height="600"></iframe>
         <br/>
         <iframe src="http://openuav.us:8081" width="1080" height="900"></iframe>
 
